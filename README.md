@@ -8,7 +8,6 @@
 
 ## Prerequisites
 
-- Prerequisites
 - Node.js
 - Postgres
 
