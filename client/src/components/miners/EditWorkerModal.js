@@ -75,7 +75,7 @@ const EditWorkerModal = ({
       const body = { name, location, hashrate: modifiedHashRate };
       console.log('body', body);
       const response = await fetch(
-        `${configs.serverURL}/${currentWorker[0].id}`,
+        `${configs.serverURL}/miner/${currentWorker[0].id}`,
         {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
