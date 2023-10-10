@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: mining_equipment; Type: TABLE; Schema: public; Owner: user
+-- Name: mining_equipment; Type: TABLE; Schema: public; Owner: vij
 --
 
 CREATE TABLE public.mining_equipment (
@@ -32,10 +32,10 @@ CREATE TABLE public.mining_equipment (
 );
 
 
-ALTER TABLE public.mining_equipment OWNER TO "user";
+ALTER TABLE public.mining_equipment OWNER TO vij;
 
 --
--- Name: mining_equipment_id_seq; Type: SEQUENCE; Schema: public; Owner: user
+-- Name: mining_equipment_id_seq; Type: SEQUENCE; Schema: public; Owner: vij
 --
 
 CREATE SEQUENCE public.mining_equipment_id_seq
@@ -47,17 +47,17 @@ CREATE SEQUENCE public.mining_equipment_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.mining_equipment_id_seq OWNER TO "user";
+ALTER TABLE public.mining_equipment_id_seq OWNER TO vij;
 
 --
--- Name: mining_equipment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: user
+-- Name: mining_equipment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: vij
 --
 
 ALTER SEQUENCE public.mining_equipment_id_seq OWNED BY public.mining_equipment.id;
 
 
 --
--- Name: mining_stats; Type: TABLE; Schema: public; Owner: user
+-- Name: mining_stats; Type: TABLE; Schema: public; Owner: vij
 --
 
 CREATE TABLE public.mining_stats (
@@ -67,10 +67,10 @@ CREATE TABLE public.mining_stats (
 );
 
 
-ALTER TABLE public.mining_stats OWNER TO "user";
+ALTER TABLE public.mining_stats OWNER TO vij;
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: user
+-- Name: users; Type: TABLE; Schema: public; Owner: vij
 --
 
 CREATE TABLE public.users (
@@ -80,10 +80,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO "user";
+ALTER TABLE public.users OWNER TO vij;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: user
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: vij
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -95,31 +95,31 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO "user";
+ALTER TABLE public.users_id_seq OWNER TO vij;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: user
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: vij
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: mining_equipment id; Type: DEFAULT; Schema: public; Owner: user
+-- Name: mining_equipment id; Type: DEFAULT; Schema: public; Owner: vij
 --
 
 ALTER TABLE ONLY public.mining_equipment ALTER COLUMN id SET DEFAULT nextval('public.mining_equipment_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: user
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: vij
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: mining_equipment; Type: TABLE DATA; Schema: public; Owner: user
+-- Data for Name: mining_equipment; Type: TABLE DATA; Schema: public; Owner: vij
 --
 
 COPY public.mining_equipment (id, name, location, hashrate) FROM stdin;
@@ -224,7 +224,7 @@ COPY public.mining_equipment (id, name, location, hashrate) FROM stdin;
 
 
 --
--- Data for Name: mining_stats; Type: TABLE DATA; Schema: public; Owner: user
+-- Data for Name: mining_stats; Type: TABLE DATA; Schema: public; Owner: vij
 --
 
 COPY public.mining_stats (total_hash_rate, active_miners, mining_revenue) FROM stdin;
@@ -233,7 +233,7 @@ COPY public.mining_stats (total_hash_rate, active_miners, mining_revenue) FROM s
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: user
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: vij
 --
 
 COPY public.users (id, username, password) FROM stdin;
@@ -242,21 +242,21 @@ COPY public.users (id, username, password) FROM stdin;
 
 
 --
--- Name: mining_equipment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: user
+-- Name: mining_equipment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vij
 --
 
 SELECT pg_catalog.setval('public.mining_equipment_id_seq', 132, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: user
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: vij
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 1, true);
 
 
 --
--- Name: mining_equipment mining_equipment_pkey; Type: CONSTRAINT; Schema: public; Owner: user
+-- Name: mining_equipment mining_equipment_pkey; Type: CONSTRAINT; Schema: public; Owner: vij
 --
 
 ALTER TABLE ONLY public.mining_equipment
@@ -264,7 +264,7 @@ ALTER TABLE ONLY public.mining_equipment
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: user
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: vij
 --
 
 ALTER TABLE ONLY public.users
@@ -272,7 +272,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: user
+-- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: vij
 --
 
 ALTER TABLE ONLY public.users

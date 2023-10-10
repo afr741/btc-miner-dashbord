@@ -15,16 +15,25 @@
 
 ### Database Connection Information
 
-- Database Host: localhost
-- Port: 5432
-- Username: user
-- Password: ''
-- Database Name: miners
+- Database Host: `localhost`
+- Port: `5432`
+- Username: `vij`
+- Password: `vij2023`
+- Database Name: `miners`
 
 ### Command-Line Loading (PostgreSQL)
 
 - Open your terminal and run the following command to load the SQL file:
-  `psql -U user -d miners -a -f miners.sql`
+  `psql -U vij -d miners -a -f miners.sql -W`
+- it will ask for password, so type `vij2023` and press enter
+
+- if the above doesn't work, you will need to add a superuser first:
+
+  - in terminal type:
+    `psql -U postgres`
+    `CREATE USER vij WITH SUPERUSER PASSWORD 'vij2023';`
+  - to verify type:
+  - `\du`
 
 - Start the server
   `node index.js`
@@ -34,5 +43,5 @@
 ### `npm start`
 
 - site login credentials:
-- username: satoshi
-- password: nakomoto
+- username: `satoshi`
+- password: `nakomoto`
